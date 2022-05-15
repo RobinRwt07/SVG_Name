@@ -1,0 +1,97 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+}
+.svg
+{
+    width:100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}    
+.path
+{
+    stroke: rgb(255, 255, 255);
+    stroke-width:20;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray:250 350;
+    animation: draw 2.4s linear infinite;
+    
+}
+.r
+{
+    d:path("M40,250 V50 H100 C150,50 160,160 50,150 L140,250");
+}
+.o
+{
+    d:path("M230,50 C150,50 150,220 220,250 S350,50 230,50");
+}
+.b
+{
+    d:path("M350,50 V250 H400 C450,250 460,140 350,150 C460,160 450,50 400,50 H350");
+}
+.i 
+{
+    d:path("M500,50 H600 H550 V250 H500 H600");
+}
+.n 
+{
+    d:path("M650,250 V50 L770,250 V50");
+}
+@keyframes draw 
+{
+    0%{
+        stroke-dasharray:0,600;
+        stroke-opacity: 0;
+    }
+    8%{
+        stroke-dasharray:50,550;
+    }
+    16%{
+        stroke-dasharray:100,500;
+    }
+    24%{
+        stroke-dasharray:150,450;
+    }
+    32%
+    {
+        stroke-dasharray:200 400;
+    }
+    40%{
+        stroke-dasharray:250 350;
+    }
+    48%
+    {
+        stroke-dasharray:300,300;
+    }
+    56%{
+        stroke-dasharray:350,250;
+    }
+    64%
+    {
+        stroke-dasharray:400,200;
+    }
+    72%
+    {
+        stroke-dasharray:450,150;
+    }
+    80%{
+        stroke-dasharray:500,100;
+    }
+    90%
+    {
+        stroke-dasharray:560,50;
+    }
+    100%
+    {
+        stroke-dasharray:660,0;
+        stroke-opacity:1;
+        stroke:burlywood;
+    }
+}    
